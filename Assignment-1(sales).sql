@@ -1,4 +1,4 @@
--- select * from sh.SALES;
+ -- select * from sh.SALES;
 -- select TIME_ID, TIME_ID+7 next_week from sh.sales;
 -- select TIME_ID,extract(year from TIME_ID) years,extract(month from TIME_ID) months,extract(day from TIME_ID) days from sh.sales;
 -- select TIME_ID,last_day(TIME_ID) last_date from sh.sales;
