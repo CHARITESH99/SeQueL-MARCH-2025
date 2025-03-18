@@ -23,7 +23,7 @@ BEGIN
     select salary, first_name into emp_salary,emp_name from hr.employees where employee_id = 101;
     DBMS_OUTPUT.PUT_LINE(emp_salary||emp_name);
 EXCEPTION 
-    WHEN DATA NOT FOUND THEN
+    WHEN NO_DATA_FOUND THEN
     dbms_output.put_line('No employee found with this id ');
 END;
 
@@ -72,7 +72,7 @@ BEGIN
     select CASE WHEN EXISTS(select 1 from hr.employees where employee_id = 105) THEN 'YES' ELSE 'NO' END into emp_exists;
     DBMS_OUTPUT.PUT_LINE(emp_exists);
 EXCEPTION 
-    WHEN DATA NOT FOUND THEN 
+    WHEN NO_DATA_FOUND THEN 
     DBMS_OUTPUT.PUT_LINE('NO');
 END;
 
